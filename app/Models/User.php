@@ -2,7 +2,10 @@
 
 namespace App\Models;
 
+<<<<<<< HEAD
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+=======
+>>>>>>> 0823c85f1c0ad32424b3b9400ddf2d1ac3bf34f7
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -18,12 +21,18 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $table = 'tb_user';
+<<<<<<< HEAD
     protected $primaryKey = 'email';
     // // Non-incrementing karena email adalah string
     public $incrementing = false;
 
     // // Tipe primary key adalah string
     protected $keyType = 'string';
+=======
+    protected $primaryKey = 'email'; 
+    public $incrementing = false; // Non-incrementing karena bukan integer
+    protected $keyType = 'string'; 
+>>>>>>> 0823c85f1c0ad32424b3b9400ddf2d1ac3bf34f7
 
     protected $fillable = [
         'name',
@@ -36,10 +45,17 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+<<<<<<< HEAD
     // protected $hidden = [
     //     'password',
     //     'remember_token',
     // ];
+=======
+    protected $hidden = [
+        'password',
+        'remember_token',
+    ];
+>>>>>>> 0823c85f1c0ad32424b3b9400ddf2d1ac3bf34f7
 
     /**
      * The attributes that should be cast.
@@ -48,6 +64,7 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+<<<<<<< HEAD
         // 'password' => 'hashed',
     ];
 
@@ -96,4 +113,8 @@ class User extends Authenticatable
         return $this->hasOne(BagianAkademik::class, 'email', 'email');
     }
 
+=======
+        'password' => 'hashed',
+    ];
+>>>>>>> 0823c85f1c0ad32424b3b9400ddf2d1ac3bf34f7
 }

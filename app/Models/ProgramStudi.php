@@ -61,11 +61,14 @@ class ProgramStudi extends Model
     {
         return $this->belongsTo(Fakultas::class, 'id_fakultas', 'id_fakultas');
     }
+<<<<<<< HEAD
 
     public function mahasiswa()
     {
         return $this->hasMany(Mahasiswa::class, 'id_programstudi', 'id_programstudi');
     }
+=======
+>>>>>>> 0823c85f1c0ad32424b3b9400ddf2d1ac3bf34f7
 }
 
 // Mengambil data program studi dan fakultas terkait
@@ -76,4 +79,8 @@ if ($programStudi) {
     echo 'Nama Fakultas: ' . $programStudi->fakultas->nama_fakultas . PHP_EOL;
 } else {
     echo 'Program studi tidak ditemukan.' . PHP_EOL;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 0823c85f1c0ad32424b3b9400ddf2d1ac3bf34f7

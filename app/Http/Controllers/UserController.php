@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+<<<<<<< HEAD
 use App\Models\Mahasiswa;
 use App\Models\Dekan;
 use App\Models\Ketuaprogramstudi;
+=======
+>>>>>>> 0823c85f1c0ad32424b3b9400ddf2d1ac3bf34f7
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -21,20 +24,35 @@ class UserController extends Controller
     public function register_action(Request $request)
     {
         $request->validate([
+<<<<<<< HEAD
             'email' => 'required|email|unique:tb_user',
             'name' => 'required',
             'password' => 'required',
             'password_confirm' => 'required|same:password',
         ]);
 
+=======
+            'name' => 'required',
+            'email' => 'required|email|unique:user_sate',
+            'password' => 'required',
+            'password_confirm' => 'required|same:password',
+        ]);
+    
+>>>>>>> 0823c85f1c0ad32424b3b9400ddf2d1ac3bf34f7
         $user = new User([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+<<<<<<< HEAD
             // 'password' => $request->password,
         ]);
         $user->save();
 
+=======
+        ]);
+        $user->save();
+    
+>>>>>>> 0823c85f1c0ad32424b3b9400ddf2d1ac3bf34f7
         return redirect()->route('login')->with('success', 'Registration success. Please login!');
     }
 
@@ -51,6 +69,7 @@ class UserController extends Controller
             'email' => 'required|email',
             'password' => 'required',
         ]);
+<<<<<<< HEAD
 
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             $request->session()->regenerate();
@@ -82,11 +101,20 @@ class UserController extends Controller
             return view('user.pemilihanrole', compact('roles'));
         }
 
+=======
+    
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+            $request->session()->regenerate();
+            return redirect()->intended('home');
+        }
+    
+>>>>>>> 0823c85f1c0ad32424b3b9400ddf2d1ac3bf34f7
         return back()->withErrors([
             'password' => 'Wrong email or password',
         ]);
     }
 
+<<<<<<< HEAD
     public function handleRoleSelection(Request $request)
     {
         $request->validate([
@@ -110,6 +138,8 @@ class UserController extends Controller
         }
     }
 
+=======
+>>>>>>> 0823c85f1c0ad32424b3b9400ddf2d1ac3bf34f7
     public function password()
     {
         $data['title'] = 'Change Password';
@@ -124,7 +154,10 @@ class UserController extends Controller
         ]);
         $user = User::find(Auth::id());
         $user->password = Hash::make($request->new_password);
+<<<<<<< HEAD
         // $user->password = ($request->new_password);
+=======
+>>>>>>> 0823c85f1c0ad32424b3b9400ddf2d1ac3bf34f7
         $user->save();
         $request->session()->regenerate();
         return back()->with('success', 'Password changed!');
@@ -137,6 +170,7 @@ class UserController extends Controller
         $request->session()->regenerateToken();
         return redirect('/');
     }
+<<<<<<< HEAD
 
     // public function mahasiswa()
     // {
@@ -148,3 +182,6 @@ class UserController extends Controller
     //     return view('dashboard.kaprodi'); // Mengarah ke resources/views/dashboard/kaprodi.blade.php
     // }
 }
+=======
+}
+>>>>>>> 0823c85f1c0ad32424b3b9400ddf2d1ac3bf34f7

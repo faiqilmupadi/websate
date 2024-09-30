@@ -53,8 +53,11 @@ class DosenPengampu extends Model
      * @var bool
      */
     public $timestamps = true;
+<<<<<<< HEAD
 
     public function matakuliah(){
         return $this->hasMany(MataKuliah::class, 'nidn_dosenpengampu', 'nidn_dosenpengampu');
     }
+=======
+>>>>>>> 0823c85f1c0ad32424b3b9400ddf2d1ac3bf34f7
 }

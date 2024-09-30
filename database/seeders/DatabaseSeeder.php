@@ -3,10 +3,13 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+<<<<<<< HEAD
 
 use App\Models\User;
 use App\Models\Mahasiswa;
 use App\Models\ProgramStudi;
+=======
+>>>>>>> 0823c85f1c0ad32424b3b9400ddf2d1ac3bf34f7
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -22,6 +25,7 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+<<<<<<< HEAD
         // $this->call(UserSeeder::class);
         // $this->call(MahasiswaSeeder::class);
         // $this->call(KaprodiSeeder::class);
@@ -36,5 +40,7 @@ class DatabaseSeeder extends Seeder
             DekanSeeder::class,
             KetuaProgramStudiSeeder::class,
         ]);
+=======
+>>>>>>> 0823c85f1c0ad32424b3b9400ddf2d1ac3bf34f7
     }
 }

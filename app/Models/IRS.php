@@ -9,6 +9,7 @@ class IRS extends Model
 {
     use HasFactory;
 
+<<<<<<< HEAD
     protected $table = 'irs';
     
     public $incrementing = false;
@@ -38,4 +39,33 @@ class IRS extends Model
       {
           return $this->belongsTo(Kelas::class, 'nama_kelas', 'nama_kelas');
       }
+=======
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'irs';
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'nim',
+        'kode_ruang',
+        'kode_mk',
+        'nama_kelas',
+    ];
+
+    /**
+     * Indicates if the model should be timestamped.
+     *
+     * @var bool
+     */
+    public $timestamps = true; // Menyimpan waktu pembuatan dan pembaruan
+
+    // Define relationships if needed
+>>>>>>> 0823c85f1c0ad32424b3b9400ddf2d1ac3bf34f7
 }

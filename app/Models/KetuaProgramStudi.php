@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+<<<<<<< HEAD
 class Ketuaprogramstudi extends Model
 {
     use HasFactory;
@@ -44,4 +45,9 @@ class Ketuaprogramstudi extends Model
     {
         return $this->belongsTo(Fakultas::class, 'id_fakultas', 'id_fakultas');
     }
+=======
+class KetuaProgramStudi extends Model
+{
+    use HasFactory;
+>>>>>>> 0823c85f1c0ad32424b3b9400ddf2d1ac3bf34f7
 }

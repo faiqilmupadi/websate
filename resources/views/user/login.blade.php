@@ -5,7 +5,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Login SATE</title>
+=======
+    <title>Login Mahasiswa</title>
+>>>>>>> 0823c85f1c0ad32424b3b9400ddf2d1ac3bf34f7
     <style>
         body {
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -106,4 +110,8 @@
     </div>
 </body>
 
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> 0823c85f1c0ad32424b3b9400ddf2d1ac3bf34f7

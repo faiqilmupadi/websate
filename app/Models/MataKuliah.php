@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+<<<<<<< HEAD
 class MataKuliah extends Model
 {
     use HasFactory;
@@ -19,10 +20,50 @@ class MataKuliah extends Model
 
     protected $keyType = 'string';
     // Atribut yang bisa diisi (fillable)
+=======
+class Matakuliah extends Model
+{
+    use HasFactory;
+
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'matakuliah';
+
+    /**
+     * The primary key associated with the table.
+     *
+     * @var string
+     */
+    protected $primaryKey = 'kode_mk';
+
+    /**
+     * Indicates if the IDs are auto-incrementing.
+     *
+     * @var bool
+     */
+    public $incrementing = false; // Karena kode_mk bukan integer
+
+    /**
+     * The data type of the primary key.
+     *
+     * @var string
+     */
+    protected $keyType = 'string'; // Tipe primary key adalah string
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
+>>>>>>> 0823c85f1c0ad32424b3b9400ddf2d1ac3bf34f7
     protected $fillable = [
         'kode_mk',
         'nama_mk',
         'sks',
+<<<<<<< HEAD
         'nidn_dosenpengampu',
     ];
 
@@ -53,3 +94,23 @@ class MataKuliah extends Model
         return $this->hasMany(Kelas::class, 'kode_mk', 'kode_mk');
     }
 }
+=======
+        'nidn_dosen',
+    ];
+
+    /**
+     * Indicates if the model should be timestamped.
+     *
+     * @var bool
+     */
+    public $timestamps = true; // Menyimpan waktu pembuatan dan pembaruan
+
+    /**
+     * Relationship with Dosen.
+     */
+    public function dosen()
+    {
+        return $this->belongsTo(Dosen::class, 'nidn_dosen', 'nidn'); // Relasi many-to-one dengan Dosen
+    }
+}
+>>>>>>> 0823c85f1c0ad32424b3b9400ddf2d1ac3bf34f7
